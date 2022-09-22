@@ -1,4 +1,4 @@
-package site.metacoding.red.domain.stadium;
+package site.metacoding.red.web.dto.request.team;
 
 import java.sql.Timestamp;
 
@@ -7,13 +7,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Setter
 @Getter
-public class Stadium {
-	private Integer id;
+public class TeamDto {
+	private Integer no;
+	private Integer stadiumId;
 	private String name;
+	private String region;
 	private Timestamp createDate;
-	
 }

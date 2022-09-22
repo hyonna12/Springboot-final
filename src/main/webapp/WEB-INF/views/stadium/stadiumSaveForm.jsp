@@ -7,7 +7,7 @@
 
 	<br />
 	<div class="d-flex flex-row justify-content-center">
-		<form class="d-flex" method="get" action="/">
+		<form class="d-flex">
 			<label for="email" class="form-label">경기장 이름 :</label>
 			<div style="width: 300px">
 				<input class="form-control me-2" type="text" placeholder="stadium" name="stadium">

@@ -27,31 +27,31 @@
 					<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Stadium</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/stadiumList">경기장 목록</a></li>
-							<li><a class="dropdown-item" href="/stadiumSaveForm">경기장 등록</a></li>
+							<li><a class="dropdown-item" href="/stadium/stadiumList">경기장 목록</a></li>
+							<li><a class="dropdown-item" href="/stadium/stadiumSaveForm">경기장 등록</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Player</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/playerList">선수 목록</a></li>
-							<li><a class="dropdown-item" href="/playerSaveForm">선수 등록</a></li>
-							<li><a class="dropdown-item" href="/playerPositionList">포지션별 선수</a></li>
+							<li><a class="dropdown-item" href="/player/playerList">선수 목록</a></li>
+							<li><a class="dropdown-item" href="/player/playerSaveForm">선수 등록</a></li>
+							<li><a class="dropdown-item" href="/player/playerPositionList">포지션별 선수</a></li>
+							<li><a class="dropdown-item" href="/player/playerTeamList">팀별 전체 선수</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Team</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/teamList">팀 목록</a></li>
-							<li><a class="dropdown-item" href="/teamSaveForm">팀 등록</a></li>
-							<li><a class="dropdown-item" href="/teamPlayerList">팀별 전체 야구선수</a></li>
+							<li><a class="dropdown-item" href="/team/teamList">팀 목록</a></li>
+							<li><a class="dropdown-item" href="/team/teamSaveForm">팀 등록</a></li>
 						</ul>
 					</li>
 					<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Expulsion</a>
 						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="/expulsionPlayerList">퇴출 선수 목록</a></li>
-							<li><a class="dropdown-item" href="/expulsionReasonForm">퇴출 사유 등록</a></li>
+							<li><a class="dropdown-item" href="/expulsion/expulsionPlayerList">퇴출 선수 목록</a></li>
+							<li><a class="dropdown-item" href="/expulsion/expulsionReasonForm">퇴출 사유 등록</a></li>
 						</ul>
 					</li>
 					
