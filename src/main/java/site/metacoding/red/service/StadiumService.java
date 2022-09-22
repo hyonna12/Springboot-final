@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.stadium.Stadium;
 import site.metacoding.red.domain.stadium.StadiumDao;
-import site.metacoding.red.web.dto.request.stadium.StadiumDto;
+import site.metacoding.red.web.dto.response.stadium.StadiumDto;
 
 @RequiredArgsConstructor
 @Service
-public class StaduimService {
+public class StadiumService {
 	private final StadiumDao stadiumDao;
 
 	public void 경기장목록보기() {

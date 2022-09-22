@@ -2,7 +2,7 @@ package site.metacoding.red.domain.stadium;
 
 import java.util.List;
 
-import site.metacoding.red.web.dto.request.stadium.StadiumDto;
+import site.metacoding.red.web.dto.response.stadium.StadiumDto;
 
 public interface StadiumDao {
 	public void insert(StadiumDto stadiumDto);

@@ -1,4 +1,4 @@
-package site.metacoding.red.web.dto.request.stadium;
+package site.metacoding.red.web.dto.response.stadium;
 
 import java.sql.Timestamp;
 
