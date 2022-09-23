@@ -17,24 +17,15 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach var="stadium" items="${PlayerPositionDto}">
 			<tr>
-				<td>투수</td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
+				<td>${PlayerPositionDto.position}</td>
+				<td>${PlayerPositionDto.playerName}</td>
+				<td>${PlayerPositionDto.playerName}</td>
+				<td>${PlayerPositionDto.playerName}</td>
 			</tr>
-			<tr>
-				<td>내야수</td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>외야수</td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-			</tr>
+			</c:forEach>
+			
 		</tbody>
 	</table>
 

@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Team {
 	private Integer id;
 	private Integer stadiumId;
-	private String name;
+	private String teamName;
 	private String region;
 	private Timestamp createDate;
 }

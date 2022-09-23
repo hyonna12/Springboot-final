@@ -1,4 +1,4 @@
-package site.metacoding.red.web.dto.request.player;
+package site.metacoding.red.web.dto.response.player;
 
 import java.sql.Timestamp;
 
@@ -9,9 +9,9 @@ import lombok.Setter;
 @Getter
 public class PlayerDto {
 	private Integer no;
-	private String name;
+	private String playerName;
 	private Integer number;
-	private Integer teamId;
+	private String teamName;
 	private String position;
-	private Timestamp createDate;	
+	private Timestamp createDate;
 }

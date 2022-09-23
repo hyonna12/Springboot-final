@@ -15,5 +15,5 @@ public class Expulsion {
 	private Integer id;
 	private String reason;
 	private Integer playerId;
-	private Timestamp createDate;
+	private Timestamp deleteDate;
 }

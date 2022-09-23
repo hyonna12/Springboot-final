@@ -1,4 +1,4 @@
-package site.metacoding.red.web.dto.response.stadium;
+package site.metacoding.red.web.dto.response.team;
 
 import java.sql.Timestamp;
 
@@ -7,8 +7,9 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class StadiumDto {
+public class TeamDto {
 	private Integer no;
+	private String teamName;
 	private String stadiumName;
-	private Timestamp createDate;
+	private String region;
 }

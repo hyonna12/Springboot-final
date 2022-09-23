@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.metacoding.red.domain.player.PlayerDao">
+
+	<insert id="insert">
+		INSERT INTO player(playerName, number, teamId, position, createDate)
+		VALUES(#{playerName}, #{number}, #{teamId}, #{position}, now());
+	</insert>
+
+	<select id="findById" resultType="site.metacoding.red.domain.player.Player">
+
+	</select>
+
+	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.player.PlayerDto">
+		SELECT * FROM player
+	</select>
+
+	<update id="update">
+	</update>
+
+	<delete id="deleteById">
+		DELETE FROM player WHERE id=#{id}
+	</delete>
+	
+	<select id="findByPosition"></select>
+	
+	<select id="findByTeam"></select>
+
+</mapper>

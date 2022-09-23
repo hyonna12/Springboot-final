@@ -19,30 +19,16 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach var="expulsion" items="${expulsionDto}">
 			<tr>
-				<th>번호</th>
-				<th>팀 이름</th>
-				<th>포지션</th>
-				<th>선수 이름</th>
-				<th>사유</th>
-				<th>퇴출일</th>
+				<td id="id">${expulsionDto.no}</td>
+				<td>${expulsionDto.teamName}</td>
+				<td>${expulsionDto.position}</td>
+				<td>${expulsionDto.playerName}</td>
+				<td>${expulsionDto.reason}</td>
+				<td>${expulsionDto.deleteDate}</td>
 			</tr>
-			<tr>
-				<th>번호</th>
-				<th>팀 이름</th>
-				<th>포지션</th>
-				<th>선수 이름</th>
-				<th>사유</th>
-				<th>퇴출일</th>
-			</tr>
-			<tr>
-				<th>번호</th>
-				<th>팀 이름</th>
-				<th>포지션</th>
-				<th>선수 이름</th>
-				<th>사유</th>
-				<th>퇴출일</th>
-			</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 

@@ -5,10 +5,9 @@ import java.util.List;
 import site.metacoding.red.web.dto.response.stadium.StadiumDto;
 
 public interface StadiumDao {
-	public void insert(StadiumDto stadiumDto);
-	public StadiumDto findById(Integer id);
+	public void insert(Stadium stadium);
+	public Stadium findById(Integer id);
 	public List<Stadium> findAll();
-	public void update(StadiumDto stadiumDto);
+	public void update(Stadium stadium);
 	public void deleteById(Integer id);
-	
 }

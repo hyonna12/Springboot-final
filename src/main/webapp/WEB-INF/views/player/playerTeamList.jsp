@@ -30,27 +30,15 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach var="player" items="${PlayerTeamDto}">
 			<tr>
-				<td>1</td>
-				<td>a</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
+				<td id="id">${PlayerTeamDto.no}</td>
+				<td>${PlayerTeamDto.playerName}</td>
+				<td>${PlayerTeamDto.position}</td>
+				<td>${PlayerTeamDto.reason}</td>
+				<td>${PlayerTeamDto.deleteDate}</td>
 			</tr>
-			<tr>
-				<td>2</td>
-				<td>b</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>c</td>
-				<td>0</td>
-				<td>0</td>
-				<td>0</td>
-			</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 

@@ -8,14 +8,39 @@
 	<br />
 	<div class="d-flex flex-row justify-content-center">
 		<form class="d-flex">
-			<label for="email" class="form-label">경기장 이름 :</label>
+			<label for="stadiumName" class="form-label">경기장 이름 :</label>
 			<div style="width: 300px">
-				<input class="form-control me-2" type="text" placeholder="stadium" name="stadium">
+				<input id="stadiumName" class="form-control me-2" type="text" placeholder="stadiumName" name="stadiumName">
 			</div>
-			<button class="btn btn-primary" type="submit">등록</button>
+			<button id="btn_Save" class="btn btn-primary" type="submit">등록</button>
 
 		</form>
 	</div>
 
+<script>
+$("#btn_Save").click(()=>{
+	save();
+});
+
+function save() {
+	let data = {
+		stadiumName: $("#stadiumName").val(),
+	};
+
+	$.ajax("/stadium", {
+		type: "POST",
+		dataType: "json", 
+		data: JSON.stringify(data), 
+		headers: {
+			"Content-Type": "application/json"
+		}
+	}).done((res) => {
+		if (res.code == 1) {
+			alert("성공");
+			location.href = "/stadium/stadiumList";
+		}
+	});
+}
+</script>
 
 <%@ include file="../layout/footer.jsp"%>

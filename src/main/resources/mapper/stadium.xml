@@ -5,18 +5,23 @@
 <mapper namespace="site.metacoding.red.domain.stadium.StadiumDao">
 
 	<insert id="insert">
+		INSERT INTO stadium(stadiumName, createDate)
+		VALUES(#{stadiumName}, now())
 	</insert>
 
 	<select id="findById" resultType="site.metacoding.red.domain.stadium.Stadium">
+
 	</select>
 
-	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.stadiumDto.StadiumDto">
+	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.stadium.StadiumDto">
+		SELECT * FROM stadium
 	</select>
 
 	<update id="update">
 	</update>
 
 	<delete id="deleteById">
+		DELETE FROM stadium WHERE id=#{id}
 	</delete>
 
 </mapper>

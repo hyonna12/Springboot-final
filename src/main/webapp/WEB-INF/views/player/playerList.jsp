@@ -20,40 +20,45 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach var="player" items="${playerDto}">
 			<tr>
-				<td>1</td>
-				<td>a</td>
-				<td>10</td>
-				<td>롯데</td>
-				<td>투수</td>
-				<td>*</td>
+				<td id="id">${playerDto.no}</td>
+				<td>${playerDto.playerName}</td>
+				<td>${playerDto.number}</td>
+				<td>${playerDto.teamName}</td>
+				<td>${playerDto.position}</td>
+				<td>${playerDto.createDate}</td>
 				<td><input type="checkbox"></td>
 			</tr>
-			<tr>
-				<td>2</td>
-				<td>b</td>
-				<td>20</td>
-				<td>삼성</td>
-				<td>내야수</td>
-				<td>*</td>
-				<td><input type="checkbox"></td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>c</td>
-				<td>30</td>
-				<td>두산</td>
-				<td>외야수</td>
-				<td>*</td>
-				<td><input type="checkbox"></td>
-			</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 
 	<div style="text-align:right;">
-		<input type="button" value="삭제">
+		<button id="btnDelete" class="btn btn-danger">삭제</button>
 	</div>
-
+	
 </div>
+
+<script>
+$("#btnDelete").click(()=>{
+	deleteById();
+});
+
+function deleteById(){
+	let id = $("#id").val();
+	
+	$.ajax("/player" + id, {
+		type: "DELETE",
+		dataType: "json"
+	}).done((res) => {
+		if (res.code == 1) {
+			location.reload();
+		} else {
+			alert("삭제 실패");
+		}
+	});
+}
+</script>
 
 <%@ include file="../layout/footer.jsp"%>

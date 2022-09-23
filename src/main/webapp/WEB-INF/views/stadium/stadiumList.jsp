@@ -4,7 +4,7 @@
 
 <h1 style="text-align:center">경기장 목록 페이지</h1>
 <div class="container">
-
+	
 	<br />
 
 	<table class="table table-striped">
@@ -17,32 +17,42 @@
 			</tr>
 		</thead>
 		<tbody>
+			<c:forEach var="stadium" items="${stadiumDto}">
 			<tr>
-				<td>1</td>
-				<td>**야구장</td>
-				<td>****-**-**</td>
+				<td id="id">${stadiumDto.no}</td>
+				<td>${stadiumDto.stadiumName}</td>
+				<td>${stadiumDto.createDate}</td>
 				<td><input type="checkbox"></td>
 			</tr>
-			<tr>
-				<td>2</td>
-				<td>**야구장</td>
-				<td>****-**-**</td>
-				<td><input type="checkbox"></td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>**야구장</td>
-				<td>****-**-**</td>
-				<td><input type="checkbox"></td>
+			</c:forEach>
 				<!-- <form method="get" action="CheckboxServlet"></form> -->
-			</tr>
 		</tbody>
 	</table>
 
 	<div style="text-align:right;">
-		<input type="button" value="삭제">
+		<button id="btnDelete" class="btn btn-danger">삭제</button>
 	</div>
 	
 </div>
 
+<script>
+$("#btnDelete").click(()=>{
+	deleteById();
+});
+
+function deleteById(){
+	let id = $("#id").val();
+	
+	$.ajax("/stadium" + id, {
+		type: "DELETE",
+		dataType: "json"
+	}).done((res) => {
+		if (res.code == 1) {
+			location.reload();
+		} else {
+			alert("삭제 실패");
+		}
+	});
+}
+</script>
 <%@ include file="../layout/footer.jsp"%>

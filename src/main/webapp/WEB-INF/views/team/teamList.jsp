@@ -18,34 +18,44 @@
 			</tr>
 		</thead>
 		<tbody>
+		
+		<c:forEach var="team" items="${teamDto}">
 			<tr>
-				<td>1</td>
-				<td>롯데</td>
-				<td>**야구장</td>
-				<td>부산</td>
+				<td id="id">${teamDto.no}</td>
+				<td>${teamDto.teamName}</td>
+				<td>${teamDto.stadiumName}</td>
+				<td>${teamDto.region}</td>
 				<td><input type="checkbox"></td>
 			</tr>
-			<tr>
-				<td>2</td>
-				<td>롯데</td>
-				<td>**야구장</td>
-				<td>부산</td>
-				<td><input type="checkbox"></td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td>롯데</td>
-				<td>**야구장</td>
-				<td>부산</td>
-				<td><input type="checkbox"></td>
-			</tr>
+			</c:forEach>
+			
 		</tbody>
 	</table>
 
 	<div style="text-align:right;">
-		<input type="button" value="삭제">
+		<button id="btnDelete" class="btn btn-danger">삭제</button>
 	</div>
 
 </div>
 
+<script>
+$("#btnDelete").click(()=>{
+	deleteById();
+});
+
+function deleteById(){
+	let id = $("#id").val();
+	
+	$.ajax("/team" + id, {
+		type: "DELETE",
+		dataType: "json"
+	}).done((res) => {
+		if (res.code == 1) {
+			location.reload();
+		} else {
+			alert("삭제 실패");
+		}
+	});
+}
+</script>
 <%@ include file="../layout/footer.jsp"%>

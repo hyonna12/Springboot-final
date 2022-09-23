@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 public class Player {
 	private Integer id;
-	private String name;
+	private String playerName;
 	private Integer number;
 	private Integer teamId;
 	private String position;
