@@ -10,7 +10,7 @@
 		<form class="d-flex">
 			<label for="stadiumName" class="form-label">경기장 이름 :</label>
 			<div style="width: 300px">
-				<input id="stadiumName" class="form-control me-2" type="text" placeholder="stadiumName" name="stadiumName">
+				<input id="stadiumName" class="form-control me-2" type="text" placeholder="경기장 이름">
 			</div>
 			<button id="btn_Save" class="btn btn-primary" type="submit">등록</button>
 
@@ -24,8 +24,8 @@ $("#btn_Save").click(()=>{
 
 function save() {
 	let data = {
-		stadiumName: $("#stadiumName").val(),
-	};
+		stadiumName: $("#stadiumName").val()
+	}
 
 	$.ajax("/stadium", {
 		type: "POST",

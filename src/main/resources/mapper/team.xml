@@ -13,8 +13,10 @@
 
 	</select>
 
-	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.team.TeamDto">
-		SELECT * FROM team
+	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.team.TeamListDto">
+		SELECT t.id, s.stadiumName , t.teamName , t.region, t.createDate
+		FROM team t INNER JOIN stadium s
+		ON t.stadiumId = s.id
 	</select>
 
 	<update id="update">

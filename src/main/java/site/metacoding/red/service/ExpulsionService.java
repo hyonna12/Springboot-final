@@ -7,13 +7,14 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.expulsion.Expulsion;
 import site.metacoding.red.domain.expulsion.ExpulsionDao;
+import site.metacoding.red.web.dto.response.expulsion.ExpulsionListDto;
 
 @RequiredArgsConstructor
 @Service
 public class ExpulsionService {
 	private final ExpulsionDao expulsionDao;
 
-	public List<Expulsion> 퇴출선수목록보기() {
+	public List<ExpulsionListDto> 퇴출선수목록보기() {
 		return expulsionDao.findAll();
 	}
 

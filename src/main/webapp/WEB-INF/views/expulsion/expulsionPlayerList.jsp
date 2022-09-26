@@ -19,14 +19,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="expulsion" items="${expulsionDto}">
+			<c:forEach var="expulsion" items="${expulsionList}">
 			<tr>
-				<td id="id">${expulsionDto.no}</td>
-				<td>${expulsionDto.teamName}</td>
-				<td>${expulsionDto.position}</td>
-				<td>${expulsionDto.playerName}</td>
-				<td>${expulsionDto.reason}</td>
-				<td>${expulsionDto.deleteDate}</td>
+				<td id="id">${expulsion.id}</td>
+				<td>${expulsion.teamName}</td>
+				<td>${expulsion.position}</td>
+				<td>${expulsion.playerName}</td>
+				<td>${expulsion.reason}</td>
+				<td>${expulsion.deleteDate}</td>
 			</tr>
 			</c:forEach>
 		</tbody>

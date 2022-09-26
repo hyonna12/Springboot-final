@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.team.Team;
 import site.metacoding.red.service.TeamService;
 import site.metacoding.red.web.dto.response.CMRespDto;
+import site.metacoding.red.web.dto.response.team.TeamListDto;
 
 @RequiredArgsConstructor
 @Controller
@@ -23,7 +24,7 @@ private final TeamService teamService;
 	
 	@GetMapping("/team/teamList")
 	public String teamForm(Model model) {
-		List<Team> teamList = teamService.팀목록보기();
+		List<TeamListDto> teamList = teamService.팀목록보기();
 		model.addAttribute("teamList", teamList);
 		return "/team/teamList";
 	}

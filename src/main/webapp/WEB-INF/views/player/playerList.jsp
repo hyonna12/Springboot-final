@@ -20,14 +20,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="player" items="${playerDto}">
+			<c:forEach var="player" items="${playerList}">
 			<tr>
-				<td id="id">${playerDto.no}</td>
-				<td>${playerDto.playerName}</td>
-				<td>${playerDto.number}</td>
-				<td>${playerDto.teamName}</td>
-				<td>${playerDto.position}</td>
-				<td>${playerDto.createDate}</td>
+				<td id="id">${player.id}</td>
+				<td>${player.playerName}</td>
+				<td>${player.number}</td>
+				<td>${player.teamName}</td>
+				<td>${player.position}</td>
+				<td>${player.createDate}</td>
 				<td><input type="checkbox"></td>
 			</tr>
 			</c:forEach>

@@ -19,12 +19,12 @@
 		</thead>
 		<tbody>
 		
-		<c:forEach var="team" items="${teamDto}">
+		<c:forEach var="team" items="${teamList}">
 			<tr>
-				<td id="id">${teamDto.no}</td>
-				<td>${teamDto.teamName}</td>
-				<td>${teamDto.stadiumName}</td>
-				<td>${teamDto.region}</td>
+				<td id="id">${team.id}</td>
+				<td>${team.teamName}</td>
+				<td>${team.stadiumName}</td>
+				<td>${team.region}</td>
 				<td><input type="checkbox"></td>
 			</tr>
 			</c:forEach>

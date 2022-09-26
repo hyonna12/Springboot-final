@@ -17,11 +17,11 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="stadium" items="${stadiumDto}">
+			<c:forEach var="stadium" items="${stadiumList}">
 			<tr>
-				<td id="id">${stadiumDto.no}</td>
-				<td>${stadiumDto.stadiumName}</td>
-				<td>${stadiumDto.createDate}</td>
+				<td id="id">${stadium.id}</td>
+				<td>${stadium.stadiumName}</td>
+				<td>${stadium.createDate}</td>
 				<td><input type="checkbox"></td>
 			</tr>
 			</c:forEach>

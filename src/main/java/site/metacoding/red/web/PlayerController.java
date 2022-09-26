@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.player.Player;
 import site.metacoding.red.service.PlayerService;
 import site.metacoding.red.web.dto.response.CMRespDto;
+import site.metacoding.red.web.dto.response.player.PlayerListDto;
 
 @RequiredArgsConstructor
 @Controller
@@ -23,8 +24,8 @@ public class PlayerController {
 
 	@GetMapping("/player/playerList")
 	public String playerForm(Model model) {
-		List<Player> playerList = playerService.선수목록보기();
-		model.addAttribute("PlayerList", playerList);
+		List<PlayerListDto> playerList = playerService.선수목록보기();
+		model.addAttribute("playerList", playerList);
 		return "/player/playerList";
 	}
 	

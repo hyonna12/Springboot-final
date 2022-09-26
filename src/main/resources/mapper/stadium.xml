@@ -13,7 +13,7 @@
 
 	</select>
 
-	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.stadium.StadiumDto">
+	<select id="findAll"	resultType="site.metacoding.red.domain.stadium.Stadium">
 		SELECT * FROM stadium
 	</select>
 

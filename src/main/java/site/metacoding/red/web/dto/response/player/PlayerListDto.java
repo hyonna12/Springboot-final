@@ -7,8 +7,8 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class PlayerDto {
-	private Integer no;
+public class PlayerListDto {
+	private Integer id;
 	private String playerName;
 	private Integer number;
 	private String teamName;

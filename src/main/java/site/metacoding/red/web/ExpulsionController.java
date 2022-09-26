@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.expulsion.Expulsion;
 import site.metacoding.red.service.ExpulsionService;
 import site.metacoding.red.web.dto.response.CMRespDto;
+import site.metacoding.red.web.dto.response.expulsion.ExpulsionListDto;
 
 @RequiredArgsConstructor
 @Controller
@@ -21,8 +22,8 @@ public class ExpulsionController {
 	
 	@GetMapping("/expulsion/expulsionPlayerList")
 	public String expulsionPlayerForm(Model model) {
-		List<Expulsion> expulsionList = expulsionService.퇴출선수목록보기();
-		model.addAttribute("ExpulsionList", expulsionList);
+		List<ExpulsionListDto> expulsionList = expulsionService.퇴출선수목록보기();
+		model.addAttribute("expulsionList", expulsionList);
 		return "/expulsion/expulsionPlayerList";
 	}
 	

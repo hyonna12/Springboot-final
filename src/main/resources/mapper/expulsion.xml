@@ -13,7 +13,7 @@
 	
 	</select>
 
-	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.expulsion.ExpulsionDto">
+	<select id="findAll"	resultType="site.metacoding.red.web.dto.response.expulsion.ExpulsionListDto">
 		SELECT * FROM expulsion
 	</select>
 
