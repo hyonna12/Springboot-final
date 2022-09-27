@@ -26,7 +26,7 @@ function save() {
 	let data = {
 		stadiumName: $("#stadiumName").val()
 	}
-
+	
 	$.ajax("/stadium", {
 		type: "POST",
 		dataType: "json", 
@@ -36,11 +36,14 @@ function save() {
 		}
 	}).done((res) => {
 		if (res.code == 1) {
-			alert("성공");
+			console.log(res);
 			location.href = "/stadium/stadiumList";
 		}
 	});
+	
 }
+
+
 </script>
 
 <%@ include file="../layout/footer.jsp"%>

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
@@ -35,8 +36,7 @@ public class StadiumController {
 	}
 	
 	@PostMapping("/stadium")
-	public @ResponseBody CMRespDto<?> stadiumUpdate(Stadium stadium) {
-		System.out.println("등록됨");
+	public @ResponseBody CMRespDto<?> stadiumUpdate(@RequestBody Stadium stadium) {
 		stadiumService.경기장등록하기(stadium);
 		return new CMRespDto<>(1, "경기장 등록 성공", null);
 	}

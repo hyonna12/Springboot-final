@@ -1,3 +1,4 @@
+
 package site.metacoding.red;
 
 import org.springframework.boot.SpringApplication;
