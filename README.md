@@ -1,5 +1,7 @@
 # MyBatis DB연결 세팅
 
+#야구팀 관리 프로그램
+
 ### 설정방법
 - MyBatisConfig 파일 필요
 - resources/mapper/*.xml 파일 필요
